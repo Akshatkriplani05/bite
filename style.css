@@ -1,0 +1,137 @@
+/* style.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.background-container {
+    background-image: url('./bgg.png');
+    background-position: center center;
+    background-size:contain;
+    background-attachment:inherit;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+}
+
+.message-container {
+    background-color: rgba(255, 255, 255, 0.5); /* Optional background for readability */
+    padding: 0.5%;
+    margin-top: 10%;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 5%;
+    text-align: center;
+    text-decoration: solid;
+    font-size: 250%;
+}
+
+#a{
+    background-color: rgba(239, 133, 190, 0.793);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    margin: 1%;
+    font-size: 150%;
+    color: rgb(223, 7, 79);
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2vh;
+}
+
+.yes-button, .no-button {
+    padding: 1vh ;
+    font-size: 2vh;
+    cursor: pointer;
+    border: none;
+    border-radius: 1%;
+    transition: background-color 0.3s ease;
+}
+
+.yes-button {
+    background-color: #e105c7; /* Green background color */
+    color: rgb(240, 236, 236);
+}
+
+.yes-button:hover {
+    background-color: #9f1087; /* Darker green on hover */
+}
+
+.yes-button:active {
+    transform: scale(0.95); /* Slightly scales down on click */
+}
+
+.no-button {
+    background-color: #f44336; /* Red background color */
+    color: white;
+}
+
+.no-button:hover {
+    background-color: #0a0101; /* Darker red on hover */
+}
+
+.no-button:active {
+    transform: scale(0.95); /* Slightly scales down on click */
+}
+.no-button.moved {
+    position: absolute; /* For random positioning */
+}
+
+.no-message {
+    margin-top: 2vh;
+    font-size: 3vh;
+    font-weight: bold;
+}
+.pause-button {
+    background-color: #03A9F4; /* Blue background color */
+    color: white;
+}
+
+.pause-button:hover {
+    background-color: #0277BD; /* Darker blue on hover */
+}
+
+.pause-button:active {
+    transform: scale(0.95); /* Slightly scales down on click */
+}
+#yes-image {
+    width: 100%;
+    height: auto;
+   
+    transition: opacity 0.5s ease;
+}
+.popup-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Adjust as needed */
+    max-width: 500px; /* Maximum width of the image */
+    background-color: rgba(234, 156, 156, 0.964); /* Dark background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    display: none; /* Initially hidden */
+    z-index: 1000; /* Ensures it appears above all other layers */
+}
+
+.popup-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 3%;
+    opacity: 0; /* Initial state for transition */
+    transition: opacity 2s ease-in-out; /* Smooth fade-in effect */
+}
+
+.popup-container.show img {
+    opacity: 0.7; /* Fade-in */
+}
